@@ -280,7 +280,7 @@ jobs:
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSH=y" >> .config
 
         ##包含 StrongSwan。XFRM 模块约 0.2MB，strongswan 约 0.7MB
-        echo "CONFIG_FIRMWARE_INCLUDE_SSWAN=n" >> .config
+        echo "CONFIG_FIRMWARE_INCLUDE_SSWAN=y" >> .config
 
         ##为 openssl 库添加椭圆曲线（EC）支持。约 0.1MB
         echo "CONFIG_FIRMWARE_INCLUDE_OPENSSL_EC=y" >> .config
@@ -411,7 +411,7 @@ jobs:
         
         echo "CONFIG_FIRMWARE_INCLUDE_ALIST=y" >> .config #ALIST文件列表 约80k
         echo "CONFIG_FIRMWARE_INCLUDE_WXSEND=y" >> .config #微信推送 约50k
-        echo "CONFIG_FIRMWARE_INCLUDE_UUPLUGIN=y" >> .config #网易UU加速器 约50k
+        echo "CONFIG_FIRMWARE_INCLUDE_UUPLUGIN=n" >> .config #网易UU加速器 约50k
         
         echo "CONFIG_FIRMWARE_INCLUDE_ALDRIVER=n" >> .config #阿里云盘 约50k
         sed -i 's/EVM_RESTART_ALDRIVER/EVM_RESTART_VIRTUALHERE/g' ./user/httpd/common.h
